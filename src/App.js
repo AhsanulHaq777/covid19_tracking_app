@@ -7,8 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Covid19 Tracking APP.</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          COMING SOON!
         </p>
         <a
           className="App-link"
