@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function DataGrids() {
+export default function GlobalDataGrids() {
   const classes = useStyles();
   const [globalData, setGlobalData] = useState({});
   useEffect(() => {

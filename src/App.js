@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import DataGrids from './components/DataGrids';
+import ChangeTab from './components/Tab';
 //import './App.css';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <DataGrids />
+      <ChangeTab />
     </div>
   );
 }
