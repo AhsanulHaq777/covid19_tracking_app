@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import GlobalDataGrids from './GlobalDataGrids';
 
+
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -64,6 +66,8 @@ export default function ChangeTab() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
+  const[gData, setgData] = React.useState(GlobalDataGrids.globalData);
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -78,7 +82,7 @@ export default function ChangeTab() {
           aria-label="nav tabs example"
         >
           <LinkTab label="Global Data" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Page Two" href="/trash" {...a11yProps(1)} />
+          <LinkTab label="Countries Data" href="/trash" {...a11yProps(1)} />
           <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
@@ -86,10 +90,10 @@ export default function ChangeTab() {
         <GlobalDataGrids />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Page Two
+      
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Page Three
+        
       </TabPanel>
     </div>
   );

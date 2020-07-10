@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Countup from 'react-countup';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +32,7 @@ export default function GlobalDataGrids() {
       let globalApiData = await response.json();
       delete globalApiData.results[0].source;
       setGlobalData(globalApiData.results[0]);
-      console.log(globalApiData.results[0]);
+      //console.log(globalApiData.results[0]);
     }
     getGlobalData();
   }, [])
@@ -44,7 +45,9 @@ export default function GlobalDataGrids() {
             <Grid item xs={12} sm={4} key={indexKey}>
               <Paper elevation={4} className={classes.paper}>
                 <h3 className={classes.gridTitle}>{dataKey.replace(/_/g, ' ').toUpperCase()}</h3>
-                <h3>{globalData[dataKey]}</h3>
+                <h3>
+                  <Countup start={0} end={globalData[dataKey]} duration={2.5} separator="," />
+                </h3>
               </Paper>
             </Grid>
           )
