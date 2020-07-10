@@ -66,8 +66,6 @@ export default function ChangeTab() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
-  const[gData, setgData] = React.useState(GlobalDataGrids.globalData);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
